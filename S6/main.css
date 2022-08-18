@@ -1,0 +1,213 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: -5rem;
+    background-color: var(--Pale-blue);
+}
+
+:root {
+
+    /*Primary Colors*/
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+    /*Neutral Colors*/
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+html {
+    font-size: 100%;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+main {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+/*Positioning and Sizing*/
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 23rem;
+    align-items: center;
+    background-color: var(--Very-pale-blue);
+    border-radius: 1rem;
+    margin: 0 1.5rem;
+}
+
+.order-info {
+    Display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    max-width: 18.2rem;
+}
+
+.price-info {
+    justify-content: space-evenly;
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    align-items: center;
+    max-width: 18.2rem;
+    background-color: hsla(225, 100%, 94%, 0.3);
+    border-radius: 0.7rem;
+    min-width: 18rem;
+}
+
+
+/*Images*/
+
+.hero {
+    max-width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+
+.note {
+    width: 2.5rem;
+}
+
+
+
+/*Text Styling*/
+
+.card p {
+    color: var(--Desaturated-blue);
+    line-height: 1.5;
+    font-size: 0.85rem;
+}
+
+.card h1 {
+    color: var(--Dark-blue);
+    font-weight: 900;
+}
+
+
+.price-info a {
+    font-size: 0.7rem;
+    font-weight: 900;
+    color: var(--Bright-blue);
+}
+
+.price-info ul {
+    list-style: none;
+    transform: translateX(-30%);
+    line-height: 1.2rem;
+}
+
+.price-info li:nth-of-type(1) {
+    font-weight: 900;
+    font-size: 0.85rem;
+    color: hsl(223, 47%, 23%);
+}
+
+.price-info li:nth-of-type(2) {
+    font-size: 0.85rem;
+    color: var(--Desaturated-blue);
+}
+
+
+/*Buttons*/
+
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 0.1rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.button-container a {
+    text-decoration: none;
+    border-radius: 0.5rem;
+    max-width: 18rem;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+.btn1 {
+    display: block;
+    padding: 0.7rem 5.2rem;
+    background-color: var(--Bright-blue);
+    color: var(--Very-pale-blue);
+    box-shadow: 0 1rem 0.5rem 0 var(--Pale-blue);
+}
+
+.btn2 {
+    padding: 0.7rem 0;
+    background-color: inherit;
+    margin-bottom: 2rem;
+    color: var(--Desaturated-blue);
+    font-weight: 900;
+}
+
+
+/*Hover Styling*/
+
+.btn1:hover {
+    opacity: 70%;
+}
+
+.btn2:hover {
+    color: hsl(223, 47%, 23%);
+}
+
+.price-info a:hover {
+    opacity: 70%;
+}
+
+
+/*Media Queries*/
+
+@media (max-width: 300px) {
+    html {
+        font-size: 80%
+    }
+}
+
+
+
+/*Attribution styling*/
+
+.attribution {
+    margin: 1rem;
+    position: absolute;
+    bottom: 0;
+    font-size: 0.85rem;
+
+}
+
+.attribution a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    color: #5800FF
+}
+
+@media (max-height: 700px) {
+    .attribution {
+        display: none; 
+    }
+
+  
+}
